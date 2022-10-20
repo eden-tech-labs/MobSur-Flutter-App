@@ -6,7 +6,7 @@ void main() {
 
   // You can call this method somewhere else in the app instead,
   // but it should not be right before an event, that should trigger a survey
-  MobSurSDK().setup('686034d7-dbf2-4555-8c7b-7ccfdc84927a', 'user-id');
+  MobSurSDK().setup('36121162-25d6-40f1-ab24-d5bd87a47601', 'user-id');
   runApp(const MyApp());
 }
 
@@ -17,11 +17,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'MobSur Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'MobSur Flutter Demo'),
     );
   }
 }
@@ -48,9 +48,9 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             TextButton(
                 onPressed: () {
-                  MobSurSDK().logEvent('myevent', context);
+                  MobSurSDK().logEvent('MY_Event', context);
                 },
-                child: const Text('Start survey'))
+                child: const Text('Start the survey'))
           ],
         ),
       ),
