@@ -1,12 +1,16 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:mobsur_flutter_sdk/mobsur_flutter_sdk.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
+  final int userId = Random().nextInt(100000000);
+
   // You can call this method somewhere else in the app instead,
   // but it should not be right before an event, that should trigger a survey
-  MobSurSDK().setup('36121162-25d6-40f1-ab24-d5bd87a47601', 'user-id');
+  MobSurSDK().setup('36121162-25d6-40f1-ab24-d5bd87a47601', '$userId');
   runApp(const MyApp());
 }
 
